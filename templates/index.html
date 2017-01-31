@@ -1,0 +1,182 @@
+
+<!DOCTYPE html >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Resume</title>
+
+{% load static %}
+
+<link type="text/css" rel="stylesheet" href={% static "css/blue.css" %} />
+<link type="text/css" rel="stylesheet" href={% static "css/print.css" %} media="print"/>
+<!--[if IE 7]>
+<link href={% static "css/ie7.css" %} rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<link href={% static "css/ie6.css" %} rel="stylesheet" type="text/css" />
+<![endif]-->
+<script type="text/javascript" src={% static "js/jquery-1.4.2.min.js" %}></script>
+<script type="text/javascript" src={% static "js/jquery.tipsy.js" %}></script>
+<script type="text/javascript" src={% static "js/cufon.yui.js" %}></script>
+<script type="text/javascript" src={% static "js/scrollTo.js" %}></script>
+<script type="text/javascript" src={% static "js/myriad.js" %}></script>
+<script type="text/javascript" src={% static "js/jquery.colorbox.js" %}></script>
+<script type="text/javascript" src={% static "js/custom.js" %}></script>
+<script type="text/javascript">
+		Cufon.replace('h1,h2');
+</script>
+</head>
+<body>
+<!-- Begin Wrapper -->
+<div id="wrapper">
+  <div class="wrapper-top"></div>
+  <div class="wrapper-mid">
+    <!-- Begin Paper -->
+    <div id="paper">
+      <div class="paper-top"></div>
+      <div id="paper-mid">
+        <div class="entry">
+          <!-- Begin Image -->
+          <img class="portrait" src={% static "images/ProfilePhoto.jpg" %} alt="My Photo" />
+          <!-- End Image -->
+          <!-- Begin Personal Information -->
+          <div class="self">
+            <h1 class="name">{{ UserInfoTable.Name }} <br /><br />
+              <span>{{ UserInfoTable.Position }}</span></h1>
+            <ul>
+              <li class="ad">{{ UserInfoTable.Address }}</li>
+              <li class="mail">{{ UserInfoTable.Email }}</li>
+              <li class="tel">{{ UserInfoTable.Tel }}</li>
+
+
+            </ul>
+          </div>
+          <!-- End Personal Information -->
+          <!-- Begin Social -->
+          <div class="social">
+            <ul>
+              <li><a class='north' href="javascript:window.print()" title="Print"><img src={% static "images/icn-print.jpg" %} alt="" /></a></li>
+              <li><a class='north' id="contact" href="contact.html" title="Contact Me"><img src={% static "images/icn-contact.jpg" %} alt="" /></a></li>
+              <li><a class='north' href={{ UserInfoTable.LinkedIn }} " title="My Linkedin Profile"><img style="height:23px;width:23px",
+                                   src={% static "images/icn-linkedin.jpg" %} alt="" /></a></li>
+            </ul>
+          </div>
+          <!-- End Social -->
+        </div>
+
+        <!-- Begin 1nd Row -->
+        <div class="entry">
+          <h2>EDUCATION</h2>
+          <div class="content">
+            <h3>{{ EducationTable.Dates }}</h3>
+            <p>{{ EducationTable.Academy }} <br />
+              <em>{{ EducationTable.Degree }} </em></p>
+          </div>
+
+        </div>
+        <!-- End 1nd Row -->
+
+        <!-- Begin 2rd Row -->
+        <div class="entry">
+          <h2>WORK <br />EXPERIENCE</h2><br /><br />
+          <div class="content">
+            <h3>{{ WorkExperienceTable.Date1 }}</h3>
+            <p>{{ WorkExperienceTable.Work1 }} <br />
+              <em>{{ WorkExperienceTable.Position1 }}</em></p>
+
+          </div>
+          <div class="content">
+            <h3>{{ WorkExperienceTable.Date2 }}</h3>
+            <p> {{ WorkExperienceTable.Work2 }}<br />
+              <em>{{ WorkExperienceTable.Position2 }}</em></p>
+
+          </div>
+
+          <div class="content">
+            <h3>{{ WorkExperienceTable.Date3 }}</h3>
+            <p> {{ WorkExperienceTable.Work3 }}<br />
+              <em>{{ WorkExperienceTable.Position3 }}</em></p>
+
+          </div>
+
+          <div class="content">
+            <h3>{{ WorkExperienceTable.Date4 }}</h3>
+            <p> {{ WorkExperienceTable.Work4 }}<br />
+              <em>{{ WorkExperienceTable.Position4 }}</em></p>
+
+          </div>
+        </div>
+        <!-- End 2rd Row -->
+
+        <!-- Begin 3th Row -->
+        <div class="entry">
+          <h2>SKILLS</h2>
+          <div class="content">
+            <h3>Software Knowledge</h3>
+            <ul class="skills">
+              <li>{{ SkillsTable.Skill1 }}</li>
+              <li>{{ SkillsTable.Skill2 }}</li>
+              <li>{{ SkillsTable.Skill3 }}</li>
+              <li>{{ SkillsTable.Skill4 }}</li>
+              <li>{{ SkillsTable.Skill5 }}</li>
+              <li>{{ SkillsTable.Skill6 }}</li>
+              <li>{{ SkillsTable.Skill7 }}</li>
+              <li>{{ SkillsTable.Skill8 }}</li>
+              <li>{{ SkillsTable.Skill9 }}</li>
+              <li>{{ SkillsTable.Skill10 }}</li>
+              <li>{{ SkillsTable.Skill11 }}</li>
+              <li>{{ SkillsTable.Skill12 }}</li>
+              <li>{{ SkillsTable.Skill13 }}</li>
+              <li>{{ SkillsTable.Skill14 }}</li>
+              <li>{{ SkillsTable.Skill15 }}</li>
+              <li>{{ SkillsTable.Skill16 }}</li>
+              <li>{{ SkillsTable.Skill17 }}</li>
+              <li>{{ SkillsTable.Skill18 }}</li>
+              <li>{{ SkillsTable.Skill19 }}</li>
+              <li>{{ SkillsTable.Skill20 }}</li>
+              <li>{{ SkillsTable.Skill21 }}</li>
+              <li>{{ SkillsTable.Skill22 }}</li>
+              <li>{{ SkillsTable.Skill23 }}</li>
+
+            </ul>
+          </div>
+          <div class="content">
+            <h3>Languages</h3>
+            <ul class="skills">
+              <li>{{ LanguagesTable.Lang1 }}</li>
+              <li>{{ LanguagesTable.Lang2 }}</li>
+              <li>{{ LanguagesTable.Lang3 }}</li>
+
+            </ul>
+          </div>
+        </div>
+        <!-- End 4th Row -->
+         <!-- Begin 5th Row -->
+        <div class="entry">
+        <h2>Certificates</h2>
+        	<ul class="certificates">
+
+                <li>{{ CertificatesTable.Cert1 }}</li><br/>
+                <li>{{ CertificatesTable.Cert2 }}</li><br/>
+                <li>{{ CertificatesTable.Cert3 }}</li><br/>
+                <li>{{ CertificatesTable.Cert4 }}</li><br/>
+                <li>{{ CertificatesTable.Cert5 }}</li><br/>
+                <li>{{ CertificatesTable.Cert6 }}</li><br/>
+                <li>{{ CertificatesTable.Cert7 }}</li><br/>
+                <li>{{ CertificatesTable.Cert8 }}</li><br/>
+
+        	</ul>
+        </div>
+        <!-- Begin 5th Row -->
+      </div>
+      <div class="clear"></div>
+      <div class="paper-bottom"></div>
+    </div>
+    <!-- End Paper -->
+  </div>
+  <div class="wrapper-bottom"></div>
+</div>
+<div id="message"><a href="#top" id="top-link">Go to Top</a></div>
+<!-- End Wrapper -->
+</body>
+</html>
