@@ -22,6 +22,22 @@ admin.site.register(Education, AdminEducation)
 
 class AdminWorkExperience(admin.ModelAdmin):
 
+    fieldsets = (
+
+        ('Work1', {'fields':
+                        ('Date1',
+                        'Work1',
+                        'Position1')}),
+        ('Work2', {'fields':
+                       ('Date2',
+                        'Work2',
+                        'Position2')}),
+        ('Work3', {'fields':
+                       ('Date3',
+                        'Work3',
+                        'Position3')}),
+    )
+
     search_fields = ('Date1',
                      'Work1',
                      'Position1',
