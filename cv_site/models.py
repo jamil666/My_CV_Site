@@ -38,6 +38,15 @@ class WorkExperience(models.Model):
     Work4 = models.CharField(max_length=100, blank=True)
     Position4 = models.CharField(max_length=200, blank=True)
 
+    Date5 = models.CharField(max_length=100, blank=True)
+    Work5 = models.CharField(max_length=100, blank=True)
+    Position5 = models.CharField(max_length=200, blank=True)
+
+    Date6 = models.CharField(max_length=100, blank=True)
+    Work6 = models.CharField(max_length=100, blank=True)
+    Position6 = models.CharField(max_length=200, blank=True)
+
+
 
 class Skills(models.Model):
 
@@ -64,6 +73,12 @@ class Skills(models.Model):
     Skill21 = models.CharField(max_length=255, blank=True)
     Skill22 = models.CharField(max_length=255, blank=True)
     Skill23 = models.CharField(max_length=255, blank=True)
+    Skill24 = models.CharField(max_length=255, blank=True)
+    Skill25 = models.CharField(max_length=255, blank=True)
+    Skill26 = models.CharField(max_length=255, blank=True)
+    Skill27 = models.CharField(max_length=255, blank=True)
+    Skill28 = models.CharField(max_length=255, blank=True)
+
 
 
 class Languages(models.Model):
@@ -83,3 +98,5 @@ class Certificates(models.Model):
     Cert6 = models.CharField(max_length=200, blank=True)
     Cert7 = models.CharField(max_length=200, blank=True)
     Cert8 = models.CharField(max_length=200, blank=True)
+    Cert9 = models.CharField(max_length=200, blank=True)
+    Cert10 = models.CharField(max_length=200, blank=True)

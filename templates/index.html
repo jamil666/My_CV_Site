@@ -1,4 +1,3 @@
-
 <!DOCTYPE html >
 
 <head>
@@ -53,7 +52,7 @@
           </div>
           <!-- End Personal Information -->
           <!-- Begin Social -->
-          <div class="social">
+          <div class="social" style="margin-right: -10%" >
             <ul>
               <li><a class='north' href="javascript:window.print()" title="Print"><img src={% static "images/icn-print.jpg" %} alt="" /></a></li>
               <li><a class='north' id="contact" href="contact.html" title="Contact Me"><img src={% static "images/icn-contact.jpg" %} alt="" /></a></li>
@@ -63,7 +62,6 @@
           </div>
           <!-- End Social -->
         </div>
-
         <!-- Begin 1nd Row -->
         <div class="entry">
           <h2>EDUCATION</h2>
@@ -72,71 +70,85 @@
             <p>{{ EducationTable.Academy }} <br />
               <em>{{ EducationTable.Degree }} </em></p>
           </div>
-
         </div>
         <!-- End 1nd Row -->
-
         <!-- Begin 2rd Row -->
         <div class="entry">
           <h2>WORK <br />EXPERIENCE</h2><br /><br />
-          <div class="content">
-            <h3>{{ WorkExperienceTable.Date1 }}</h3>
-            <p>{{ WorkExperienceTable.Work1 }} <br />
-              <em>{{ WorkExperienceTable.Position1 }}</em></p>
 
+                    <div class="content">
+                        {% if WorkExperienceTable %}
+
+                            <h3 class="hhh" >{{ WorkExperienceTable.Date1 }}</h3>
+                            <p> {{ WorkExperienceTable.Work1 }}<br />
+                              <em>{{ WorkExperienceTable.Position1 }}</em></p>
+
+
+                            <h3 class="hhh" >{{ WorkExperienceTable.Date2 }}</h3>
+                            <p> {{ WorkExperienceTable.Work2 }}<br />
+                              <em>{{ WorkExperienceTable.Position2 }}</em></p>
+
+
+                            <h3 class="hhh" >{{ WorkExperienceTable.Date3 }}</h3>
+                            <p> {{ WorkExperienceTable.Work3 }}<br />
+                              <em>{{ WorkExperienceTable.Position3 }}</em></p>
+
+
+                            <h3 class="hhh" >{{ WorkExperienceTable.Date4 }}</h3>
+                            <p> {{ WorkExperienceTable.Work4 }}<br />
+                              <em>{{ WorkExperienceTable.Position4 }}</em></p>
+
+
+                            <h3 class="hhh" >{{ WorkExperienceTable.Date5 }}</h3>
+                            <p> {{ WorkExperienceTable.Work5 }}<br />
+                              <em>{{ WorkExperienceTable.Position5 }}</em></p>
+
+                            <h3 class="hhh" >{{ WorkExperienceTable.Date6 }}</h3>
+                            <p> {{ WorkExperienceTable.Work6 }}<br />
+                              <em>{{ WorkExperienceTable.Position6 }}</em></p>
+
+                        {% endif %}
           </div>
-          <div class="content">
-            <h3>{{ WorkExperienceTable.Date2 }}</h3>
-            <p> {{ WorkExperienceTable.Work2 }}<br />
-              <em>{{ WorkExperienceTable.Position2 }}</em></p>
 
-          </div>
-
-          <div class="content">
-            <h3>{{ WorkExperienceTable.Date3 }}</h3>
-            <p> {{ WorkExperienceTable.Work3 }}<br />
-              <em>{{ WorkExperienceTable.Position3 }}</em></p>
-
-          </div>
-
-          <div class="content">
-            <h3>{{ WorkExperienceTable.Date4 }}</h3>
-            <p> {{ WorkExperienceTable.Work4 }}<br />
-              <em>{{ WorkExperienceTable.Position4 }}</em></p>
-
-          </div>
         </div>
         <!-- End 2rd Row -->
-
         <!-- Begin 3th Row -->
         <div class="entry">
           <h2>SKILLS</h2>
           <div class="content">
             <h3>Software Knowledge</h3>
             <ul class="skills">
-              <li>{{ SkillsTable.Skill1 }}</li>
-              <li>{{ SkillsTable.Skill2 }}</li>
-              <li>{{ SkillsTable.Skill3 }}</li>
-              <li>{{ SkillsTable.Skill4 }}</li>
-              <li>{{ SkillsTable.Skill5 }}</li>
-              <li>{{ SkillsTable.Skill6 }}</li>
-              <li>{{ SkillsTable.Skill7 }}</li>
-              <li>{{ SkillsTable.Skill8 }}</li>
-              <li>{{ SkillsTable.Skill9 }}</li>
-              <li>{{ SkillsTable.Skill10 }}</li>
-              <li>{{ SkillsTable.Skill11 }}</li>
-              <li>{{ SkillsTable.Skill12 }}</li>
-              <li>{{ SkillsTable.Skill13 }}</li>
-              <li>{{ SkillsTable.Skill14 }}</li>
-              <li>{{ SkillsTable.Skill15 }}</li>
-              <li>{{ SkillsTable.Skill16 }}</li>
-              <li>{{ SkillsTable.Skill17 }}</li>
-              <li>{{ SkillsTable.Skill18 }}</li>
-              <li>{{ SkillsTable.Skill19 }}</li>
-              <li>{{ SkillsTable.Skill20 }}</li>
-              <li>{{ SkillsTable.Skill21 }}</li>
-              <li>{{ SkillsTable.Skill22 }}</li>
-              <li>{{ SkillsTable.Skill23 }}</li>
+                {% if SkillsTable %}
+                      <li>{{ SkillsTable.Skill1 }}</li>
+                      <li>{{ SkillsTable.Skill2 }}</li>
+                      <li>{{ SkillsTable.Skill3 }}</li>
+                      <li>{{ SkillsTable.Skill4 }}</li>
+                      <li>{{ SkillsTable.Skill5 }}</li>
+                      <li>{{ SkillsTable.Skill6 }}</li>
+                      <li>{{ SkillsTable.Skill7 }}</li>
+                      <li>{{ SkillsTable.Skill8 }}</li>
+                      <li>{{ SkillsTable.Skill9 }}</li>
+                      <li>{{ SkillsTable.Skill10 }}</li>
+                      <li>{{ SkillsTable.Skill11 }}</li>
+                      <li>{{ SkillsTable.Skill12 }}</li>
+                      <li>{{ SkillsTable.Skill13 }}</li>
+                      <li>{{ SkillsTable.Skill14 }}</li>
+                      <li>{{ SkillsTable.Skill15 }}</li>
+                      <li>{{ SkillsTable.Skill16 }}</li>
+                      <li>{{ SkillsTable.Skill17 }}</li>
+                      <li>{{ SkillsTable.Skill18 }}</li>
+                      <li>{{ SkillsTable.Skill19 }}</li>
+                      <li>{{ SkillsTable.Skill20 }}</li>
+                      <li>{{ SkillsTable.Skill21 }}</li>
+                      <li>{{ SkillsTable.Skill22 }}</li>
+                      <li>{{ SkillsTable.Skill23 }}</li>
+                      <li>{{ SkillsTable.Skill24 }}</li>
+                      <li>{{ SkillsTable.Skill25 }}</li>
+                      <li>{{ SkillsTable.Skill26 }}</li>
+                      <li>{{ SkillsTable.Skill27 }}</li>
+                      <li>{{ SkillsTable.Skill28 }}</li>
+
+                {% endif %}
 
             </ul>
           </div>
@@ -146,7 +158,6 @@
               <li>{{ LanguagesTable.Lang1 }}</li>
               <li>{{ LanguagesTable.Lang2 }}</li>
               <li>{{ LanguagesTable.Lang3 }}</li>
-
             </ul>
           </div>
         </div>
@@ -156,14 +167,18 @@
         <h2>Certificates</h2>
         	<ul class="certificates">
 
-                <li>{{ CertificatesTable.Cert1 }}</li><br/>
-                <li>{{ CertificatesTable.Cert2 }}</li><br/>
-                <li>{{ CertificatesTable.Cert3 }}</li><br/>
-                <li>{{ CertificatesTable.Cert4 }}</li><br/>
-                <li>{{ CertificatesTable.Cert5 }}</li><br/>
-                <li>{{ CertificatesTable.Cert6 }}</li><br/>
-                <li>{{ CertificatesTable.Cert7 }}</li><br/>
-                <li>{{ CertificatesTable.Cert8 }}</li><br/>
+                {% if CertificatesTable %}
+                    <li>{{ CertificatesTable.Cert1 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert2 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert3 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert4 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert5 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert6 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert7 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert8 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert9 }}</li><br/>
+                    <li>{{ CertificatesTable.Cert10 }}</li><br/>
+                {% endif %}
 
         	</ul>
         </div>
@@ -176,7 +191,6 @@
   </div>
   <div class="wrapper-bottom"></div>
 </div>
-
 <!-- End Wrapper -->
 </body>
 </html>

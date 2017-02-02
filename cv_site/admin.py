@@ -41,6 +41,16 @@ class AdminWorkExperience(admin.ModelAdmin):
                        ('Date4',
                         'Work4',
                         'Position4')}),
+
+        ('Work5', {'fields':
+                       ('Date5',
+                        'Work5',
+                        'Position5')}),
+
+        ('Work6', {'fields':
+                       ('Date6',
+                        'Work6',
+                        'Position6')}),
     )
 
     search_fields = ('Date1',

@@ -205,7 +205,12 @@ div.content {
 	display:block;
 	padding-top:32px;
 }
-
+.content p{
+	line-height:200%;
+}
+.hhh {
+	margin-top: 4.5px;
+}
 h3 {
 	width:180px;
 	text-align: right;
@@ -214,6 +219,7 @@ h3 {
 	clear:both;
 	font-size: 13px;
 	color:#7b90b5;
+
 }
 
 h4 {
