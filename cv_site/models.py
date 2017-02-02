@@ -15,9 +15,13 @@ class UserInfo(models.Model):
 
 class Education(models.Model):
 
-    Dates = models.CharField(max_length=100, blank=True)
-    Academy = models.CharField(max_length=200, blank=True)
-    Degree = models.CharField(max_length=200, blank=True)
+    Date1 = models.CharField(max_length=100, blank=True)
+    Academy1 = models.CharField(max_length=200, blank=True)
+    Degree1 = models.CharField(max_length=200, blank=True)
+
+    Date2 = models.CharField(max_length=100, blank=True)
+    Academy2 = models.CharField(max_length=200, blank=True)
+    Degree2 = models.CharField(max_length=200, blank=True)
 
 
 class WorkExperience(models.Model):

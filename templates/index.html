@@ -36,7 +36,7 @@
       <div id="paper-mid">
         <div class="entry">
           <!-- Begin Image -->
-          <img class="portrait" src={% static "images/ProfilePhoto.jpg" %} alt="My Photo" />
+          <img class="portrait" src={% static "images/ProfilePhoto.jpg" %} alt="MyPhoto" />
           <!-- End Image -->
           <!-- Begin Personal Information -->
           <div class="self">
@@ -66,9 +66,18 @@
         <div class="entry">
           <h2>EDUCATION</h2>
           <div class="content">
-            <h3>{{ EducationTable.Dates }}</h3>
-            <p>{{ EducationTable.Academy }} <br />
-              <em>{{ EducationTable.Degree }} </em></p>
+
+              {% if EducationTable %}
+                    <h3>{{ EducationTable.Date1 }}</h3>
+                    <p>{{ EducationTable.Academy1 }} <br />
+                    <em>{{ EducationTable.Degree1 }} </em></p>
+
+                    <h3>{{ EducationTable.Date2 }}</h3>
+                    <p>{{ EducationTable.Academy2 }} <br />
+                    <em>{{ EducationTable.Degree2 }} </em></p>
+
+              {% endif %}
+
           </div>
         </div>
         <!-- End 1nd Row -->
